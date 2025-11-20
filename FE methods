@@ -1,0 +1,12 @@
+Here are the certain feature engineering methods used and the reason to use them : 
+| Feature             | Meaning               | Why It Helps Detect Fraud       | Typical Pattern in Phishing |
+| ------------------- | --------------------- | ------------------------------- | --------------------------- |
+| `domain_length`     | Length of domain      | Long, random domains            | High                        |
+| `having_ip_address` | Raw IP used           | No legit domain                 | Yes                         |
+| `having_@_symbol`   | “@” present           | URL obfuscation                 | Yes                         |
+| `url_length`        | Total length          | Hidden domain or token stuffing | High                        |
+| `url_depth`         | Path depth            | Directory chain to hide         | Moderate                    |
+| `redirection`       | Multiple `//`         | Fake redirection                | Yes                         |
+| `https_in_domain`   | “https” inside domain | Fake sense of security          | Yes                         |
+| `tinyurl`           | Shortened URL         | Hidden destination              | Yes                         |
+| `prefix_suffix`     | Hyphen in domain      | Brand mimicry                   | Yes                         |
