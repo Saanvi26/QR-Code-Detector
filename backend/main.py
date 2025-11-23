@@ -47,7 +47,7 @@ def extract_features(url):
     features['tld_length'] = len(tld_match.group(1)) if tld_match else 0
 
     # Suspicious words
-    suspicious_words = ['login', 'secure', 'verify', 'account', 'update', 'free', 'bonus', 'bank']
+    suspicious_words = ['login', 'secure', 'verify', 'account', 'update', 'free', 'bonus', 'bank','spam']
     features['contains_suspicious_words'] = 1 if any(word in url.lower() for word in suspicious_words) else 0
 
     return pd.Series(features)

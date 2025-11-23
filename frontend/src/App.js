@@ -213,16 +213,12 @@ function App() {
         </div>
         <div className="stats">
           <div>
-            <span>1.2M+</span>
+            <span>2M+</span>
             <p>QRs inspected</p>
           </div>
           <div>
-            <span>99.5%</span>
-            <p>Malware detection rate</p>
-          </div>
-          <div>
-            <span>24/7</span>
-            <p>Cloud monitoring</p>
+            <span>97.6%</span>
+            <p>Malware Detection Accuracy</p>
           </div>
         </div>
       </div>
@@ -349,8 +345,8 @@ function App() {
                   {qrResult.error
                     ? qrResult.verdict
                     : qrResult.verdict === "malicious"
-                    ? "⚠️ Malicious URL Detected"
-                    : "✅ Safe URL"}
+                    ? "⚠️ Malicious QR Code Detected"
+                    : "✅ Safe QR Code"}
                 </p>
 
                 {!qrResult.error && (
